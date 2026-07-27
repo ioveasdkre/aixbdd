@@ -9,7 +9,7 @@ import { test as base, createBdd } from 'playwright-bdd';
  *   `page.route` intercepts API calls via DevTools protocol — no in-app
  *   `src/mocks/**`, no `/__test__/*` HTTP indirection, no transport switch.
  *
- * Boundary invariants (see aibdd-core::boundaries/web-frontend):
+ * Boundary invariants (see aibdd-core::assets/boundaries/web-frontend):
  *   I1 — `page.route` is the cross-process surface (browser ↔ test-runner)
  *   I3 — fixture scope = test → closure recreated per scenario; no manual reset
  *

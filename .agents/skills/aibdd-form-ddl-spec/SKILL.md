@@ -33,7 +33,7 @@ Formulation skill。綁定 DSL = SQL DDL，支援三種方言：
 | Axis 單位對應 | 推理包中每個單位的具體對應 |
 | CiC 記號清單 | 便條紙（GAP / ASM / BDY / CON）+ 錨點 |
 | 退出狀態 | Reason 步是否完整通過 |
-| `target_path` | Planner 指定之**相對於 `${DATA_DIR}` 的檔案路徑**，**必須**以 `.mysql.sql` / `.pg.sql` / `.mssql.sql` 結尾（例：`domain.mysql.sql`、`<boundary-id>/states/<state>.pg.sql`；切檔策略由 Planner 決定）。**不得**含 `<<NN-functional-module>>` 借位子層 — `${DATA_DIR}` 在 SSOT 已是 flat directory（見 `aibdd-core::spec-package-paths.md`），functional module 借位只允許出現在 `${TRUTH_BOUNDARY_PACKAGES_DIR}` 子樹。 |
+| `target_path` | Planner 指定之**相對於 `${DATA_DIR}` 的檔案路徑**，**必須**以 `.mysql.sql` / `.pg.sql` / `.mssql.sql` 結尾（例：`domain.mysql.sql`、`<boundary-id>/states/<state>.pg.sql`；切檔策略由 Planner 決定）。**不得**含 `<<NN-functional-module>>` 借位子層 — `${DATA_DIR}` 在 SSOT 已是 flat directory（見 `aibdd-core::references/ssot/spec-package-paths.md`），functional module 借位只允許出現在 `${TRUTH_BOUNDARY_PACKAGES_DIR}` 子樹。 |
 
 **Dialect SSOT**：dialect 完全由 `target_path` 副檔名決定；Planner **不另傳** `dialect` 欄位，本 skill 也**不另寫入** dialect 識別字到檔案中。
 
@@ -86,13 +86,13 @@ Formulation skill。綁定 DSL = SQL DDL，支援三種方言：
 
 ### CiC 註解
 - 行尾：`-- CiC(<CATEGORY>): ...`（CATEGORY ∈ GAP / ASM / AMB / CON）
-- 完整格式定義見 `aibdd-form-activity::references/cic-format.md`
+- 各 CATEGORY 的標記時機見 `references/format-reference.md` §4「便條紙格式」
 
 ---
 
 ## §5 匯報
 
-以白話文 1–3 句匯報（依 `aibdd-core::planner-contract.md` §REPORT 匯報；不輸出 JSON / YAML）：
+以白話文 1–3 句向 Planner 匯報（不輸出 JSON / YAML）：
 
 > Form DDL Spec 完成。產出 N 個 `<dialect>` DDL 檔案。{若有便條紙則加「尚有 N 張便條紙待釐清」；無則省略}
 

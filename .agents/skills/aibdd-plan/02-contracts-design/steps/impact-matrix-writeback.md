@@ -1,4 +1,4 @@
-本 phase 同時回寫 contracts 與 data；兩者皆以 `(owner, spec)` 為鍵冪等寫一個 impact，`owner=aibdd-plan`：`quotes` 指回驅動該 spec 的需求原文（≥1，取自 `${PLAN_SPEC}`／feature truth），`rationale` 以現在式一句話描述本 phase 對該檔的規格增量。CLI 用法詳見 `aibdd-core::impact-matrix/cli-usage.md`。
+本 phase 同時回寫 contracts 與 data；兩者皆以 `(owner, spec)` 為鍵冪等寫一個 impact，`owner=aibdd-plan`：`quotes` 指回驅動該 spec 的需求原文（≥1，取自 `${PLAN_SPEC}`／feature truth），`rationale` 以現在式一句話描述本 phase 對該檔的規格增量。CLI 用法詳見 `aibdd-core::references/impact-matrix/cli-usage.md`。
 
 1. FOR EACH 步驟 2 之 contract `slice.target_path`，spec path＝`contracts/<target_path>`（相對 `${TRUTH_BOUNDARY_ROOT}`）。
 2. FOR EACH 步驟 4 之 state `target_path`，spec path＝`data/<target_path>`（相對 `${TRUTH_BOUNDARY_ROOT}`）。

@@ -49,7 +49,7 @@
    5. 若無法解析任一 function package slug，STOP 並回報 `function-packaging.md` 不完整。
 
 5. TRIGGER impact matrix read，BIND `$PLAN_MUTABLE_IMPACT_SPECS`
-   1. 以 `read --spec-status inconsistent` 讀本輪 plan mutable worklist（仍 `inconsistent` 的 spec 才算待做），攤平 `impacts[].specs[].path` 為 `$PLAN_MUTABLE_IMPACT_SPECS`。CLI 用法詳見 `aibdd-core::impact-matrix/cli-usage.md`。
+   1. 以 `read --spec-status inconsistent` 讀本輪 plan mutable worklist（仍 `inconsistent` 的 spec 才算待做），攤平 `impacts[].specs[].path` 為 `$PLAN_MUTABLE_IMPACT_SPECS`。CLI 用法詳見 `aibdd-core::references/impact-matrix/cli-usage.md`。
    2. FILTER：只保留 path 落在 `$PLAN_SCOPE.function_package_slugs[]` 所屬 `${TRUTH_BOUNDARY_PACKAGES_DIR}/<slug>/**`、或 `${CONTRACTS_DIR}/**`、或 `${DATA_DIR}/**` 的 spec；其餘不納入本輪 plan 推導 scope。
 
 6. READ-ONLY 載入既有真相骨架（不寫入）

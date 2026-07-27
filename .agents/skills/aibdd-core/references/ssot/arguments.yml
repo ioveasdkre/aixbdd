@@ -126,15 +126,13 @@ TRUTH_TEST_PLAN_DIR: ${TRUTH_FUNCTION_PACKAGE}/test-plan
 BOUNDARY_PACKAGE_DSL: ${TRUTH_FUNCTION_PACKAGE}/dsl.yml
 
 # -----------------------------------------------------------------------------
-# 8. BDD_STRATEGY_REFS — invariant 部分（Gherkin / filename / sentence-parts refs）
+# 8. BDD_STRATEGY_REFS — invariant 部分（Gherkin / filename refs）
 # -----------------------------------------------------------------------------
 
 # GHERKIN_EXECUTABLE_STEP_LANGUAGE_REF — 可執行 step 的語言 i18n ref，依 PROJECT_SPEC_LANGUAGE 解析（值為檔案路徑）
 GHERKIN_EXECUTABLE_STEP_LANGUAGE_REF: .claude/skills/aibdd-core/references/i18n/${PROJECT_SPEC_LANGUAGE}.md
 # FILENAME_AXES_TITLE_LANGUAGE_REF — 檔名軸標題的語言 i18n ref（值為檔案路徑）
 FILENAME_AXES_TITLE_LANGUAGE_REF: .claude/skills/aibdd-core/references/i18n/${PROJECT_SPEC_LANGUAGE}.md
-# SENTENCE_PARTS_FRAMEWORK_REF — sentence-parts 框架定義 ref（值為檔案路徑）
-SENTENCE_PARTS_FRAMEWORK_REF: .claude/skills/aibdd-core/references/sentence-parts-framework/default.md
 
 # -----------------------------------------------------------------------------
 # 9. PROJECT_OWNED_BDD_STACK（starter 產生實體文件；本檔只宣告路徑）

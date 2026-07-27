@@ -39,7 +39,7 @@
 
    **預填 `datatable_bindings` 改名**：plugin 在 HARNESS 階段可能已直接預填部分 `datatable_bindings`。這些 key 預設以 raw spec 欄位名稱填入。SEMANTIC 須逐一審視已預填的 key，依 `${DSL_KEY_LOCALE}` 規則改名為業務術語（若名稱已符合慣例可保留）；`target` 路徑同樣**原樣帶過**，禁止修改。
 
-   4.3 寫入 `format` 業務句（actor-operation-object 句型，遵 `aibdd-core::references/sentence-parts-framework/default.md`）；引用 binding key 用 `{key}` 占位。
+   4.3 寫入 `format` 業務句（actor-operation-object 句型，遵 `rules/01-dsl-entry-schema.md`）；引用 binding key 用 `{key}` 占位。
 
    4.4 刪除 skeleton 中所有 plugin 寫入之候選參數註解區塊與 `<FILL IN>` 占位；若 `datatable_bindings` 仍為空，明確寫成 `{}`（不可留空 block 或殘留註解）。
 
@@ -69,4 +69,4 @@
 
 ---
 
-**遷移備註**：本 SOP 之前版本（commit 99d7149 之前）採 per-rule 迭代搭配 `${BOUNDARY_PACKAGE_DSL}`（function-package 內 dsl.yml）與 `scripts/dsl-cli/run.py search/verify`。該流已不再使用 — dsl.yml 已遷出 function package 落到 contracts/data 同目錄；entry schema 已從 4 層巢狀改成扁平。schema 細節以 `experiemented-skills/aibdd-plan/04-dsl-synthesis/rules/01-dsl-entry-schema.md` 內之 deprecation pointer 為準。
+**遷移備註**：本 SOP 之前版本（commit 99d7149 之前）採 per-rule 迭代搭配 `${BOUNDARY_PACKAGE_DSL}`（function-package 內 dsl.yml）與 `scripts/dsl-cli/run.py search/verify`。該流已不再使用 — dsl.yml 已遷出 function package 落到 contracts/data 同目錄；entry schema 已從 4 層巢狀改成扁平。schema 細節以 `rules/01-dsl-entry-schema.md` 為準。

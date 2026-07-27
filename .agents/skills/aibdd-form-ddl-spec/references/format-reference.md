@@ -123,8 +123,6 @@ col INT NOT NULL,  -- CiC(GAP): unit unclear from feature
 
 行尾 comment：`-- CiC(<CATEGORY>): ...`
 
-完整格式定義見 `aibdd-form-activity::references/cic-format.md`。
-
 | 代碼 | 何時標記 |
 |------|---------|
 | `GAP` | 無法從 .feature 確定欄位型別或長度 |

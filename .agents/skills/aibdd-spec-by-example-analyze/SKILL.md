@@ -48,7 +48,7 @@ metadata:
 
 0. 在 CWD 底下 grep 搜尋 `**/arguments.yml` 檔案，做 parameters binding for all following phases，這些參數後續每一 phase 都會用到。此檔案一定存在，如不存在請直接停止執行，向使用者回報：「我在 ${CWD} 底下找不到 **/arguments.yml 檔案，你是否已經執行過 /aibdd-kickoff、/aibdd-flows-specify、/aibdd-rules-specify、/aibdd-plan 了？」
 
-1. BIND feature files——以 `read --spec-path '\.feature$' --spec-status inconsistent` 取本輪仍待改寫的 mutable `.feature` spec，攤平 `impacts[].specs[].path` 物化成 `${SCOPED_FEATURE_PATHS}`（每筆若未以 `${SPECS_ROOT_DIR}/` 開頭則 prefix `${SPECS_ROOT_DIR}/`，去重後排序）；後續所有 sub-SOP 一律沿用 `${SCOPED_FEATURE_PATHS}`。CLI 用法詳見 `aibdd-core::impact-matrix/cli-usage.md`。
+1. BIND feature files——以 `read --spec-path '\.feature$' --spec-status inconsistent` 取本輪仍待改寫的 mutable `.feature` spec，攤平 `impacts[].specs[].path` 物化成 `${SCOPED_FEATURE_PATHS}`（每筆若未以 `${SPECS_ROOT_DIR}/` 開頭則 prefix `${SPECS_ROOT_DIR}/`，去重後排序）；後續所有 sub-SOP 一律沿用 `${SCOPED_FEATURE_PATHS}`。CLI 用法詳見 `aibdd-core::references/impact-matrix/cli-usage.md`。
    若 matrix 缺失、`violations` 非空、或物化後 `${SCOPED_FEATURE_PATHS}` 為空，STOP 並回報本輪無 mutable feature scope。
 
 2. EXECUTE `01-example-form-lock/SOP.md`

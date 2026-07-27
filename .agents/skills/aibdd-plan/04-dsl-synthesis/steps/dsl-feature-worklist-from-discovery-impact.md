@@ -2,7 +2,7 @@
 
 由 `${IMPACT_MATRIX_YML}` 決定「本輪須對哪些 `.feature` 做 DSL 迭代」的可列舉工作集，輸出 **`$DSL_FEATURE_WORKLIST`**。
 
-1. 以 `read --spec-path '\.feature$' --spec-status inconsistent` 取仍待落地的 `.feature` 工作清單（每個 spec 仍 `inconsistent` 才算待做）；攤平 `impacts[].specs[].path`，依 `${SPECS_ROOT_DIR}` 物化、去重後排序，記為 **`$DSL_FEATURE_WORKLIST`**。CLI 用法詳見 `aibdd-core::impact-matrix/cli-usage.md`。
+1. 以 `read --spec-path '\.feature$' --spec-status inconsistent` 取仍待落地的 `.feature` 工作清單（每個 spec 仍 `inconsistent` 才算待做）；攤平 `impacts[].specs[].path`，依 `${SPECS_ROOT_DIR}` 物化、去重後排序，記為 **`$DSL_FEATURE_WORKLIST`**。CLI 用法詳見 `aibdd-core::references/impact-matrix/cli-usage.md`。
    物化規則：若 `path` 未以 `${SPECS_ROOT_DIR}/` 開頭，則 prefix `${SPECS_ROOT_DIR}/`。
    若自 `/aibdd-plan` 呼叫，FILTER：只保留 path 落在 `$PLAN_SCOPE.function_package_slugs[]` 所屬 `${TRUTH_BOUNDARY_PACKAGES_DIR}/<slug>/**` 的 path。
 
